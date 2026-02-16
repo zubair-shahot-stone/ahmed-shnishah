@@ -47,6 +47,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 .logo {
@@ -325,10 +326,8 @@ footer {
     font-size: 0.9rem;
 }
 
-.email-highlight {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.email-highlight,
+.phone-highlight {
     background: rgba(0, 123, 255, 0.1);
     border-right: 4px solid var(--primary-color);
     padding: 1.5rem;
@@ -339,7 +338,8 @@ footer {
     direction: ltr;
 }
 
-.email-highlight i {
+.email-highlight i,
+.phone-highlight i {
     color: var(--primary-color);
     margin-left: 10px;
     font-size: 1.4rem;
@@ -362,8 +362,11 @@ footer {
 
 @media (max-width: 768px) {
     .mobile-toggle {
-        display: inline-block;
+        display: block;
+    }
 
+    .header-container {
+        margin: 0 -100px;
     }
 
     nav ul {
@@ -412,6 +415,10 @@ footer {
 @media (max-width: 576px) {
     .hero {
         height: 80vh;
+    }
+
+    .header-container {
+        margin: 0 -50px;
     }
 
     .hero h1 {
