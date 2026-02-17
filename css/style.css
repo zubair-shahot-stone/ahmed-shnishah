@@ -9,7 +9,8 @@
 }
 
 /* CRITICAL: Prevent horizontal overflow on all devices */
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     width: 100%;
     direction: rtl;
@@ -33,10 +34,16 @@ body {
     padding-right: var(--bs-gutter-x, 0.75rem) !important;
 }
 
-/* Offcanvas fixes for RTL */
-.offcanvas-start {
-    transform: translateX(100%);
-    border-radius: 0 8px 8px 0 !important;
+/* url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') */
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/alabaren-alalmeay.jpeg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
 }
 
 .offcanvas.show {
@@ -72,6 +79,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -83,41 +91,50 @@ body {
     opacity: 0;
 }
 
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
+.delay-1 {
+    animation-delay: 0.15s;
+}
+
+.delay-2 {
+    animation-delay: 0.3s;
+}
+
+.delay-3 {
+    animation-delay: 0.45s;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-text {
         font-size: 1.35rem !important;
     }
-    
+
     .nav-link {
         font-size: 0.95rem;
         padding: 0.4rem 0 !important;
     }
-    
+
     .hero h1 {
         font-size: 1.9rem !important;
         line-height: 1.3;
     }
-    
+
     .hero p {
         font-size: 1.15rem !important;
     }
-    
+
     .btn-lg {
         padding: 0.75rem 1.5rem !important;
         font-size: 1.1rem;
     }
-    
+
     /* Prevent container overflow on small screens */
-    .container, .container-fluid {
+    .container,
+    .container-fluid {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    
+
     /* Fix offcanvas width on small screens */
     .offcanvas {
         width: 85% !important;
@@ -129,35 +146,41 @@ body {
     .hero h1 {
         font-size: 1.7rem !important;
     }
-    
+
     .hero p {
         font-size: 1.05rem !important;
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
     }
-    
+
     .btn-lg {
         width: 95%;
         margin: 0 auto;
         display: block;
     }
-    
+
     /* Critical: Prevent any element from exceeding viewport */
     * {
         max-width: 100%;
         box-sizing: border-box;
     }
-    
-    img, video, canvas, audio, iframe, embed, object {
+
+    img,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
         max-width: 100%;
     }
-    
+
     /* Fix email box on tiny screens */
     .email-highlight {
         padding: 0.75rem !important;
         font-size: 0.9rem !important;
     }
-    
+
     .email-highlight i {
         font-size: 0.95rem !important;
         margin-right: 0.4rem !important;
