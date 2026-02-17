@@ -3,123 +3,177 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البحرين العالمية الطبية | حلول الرعاية الصحية المتقدمة</title>
-    <meta name="description"
-        content="توفر البحرين العالمية الطبية معدات طبية متطورة وحلول رعاية صحية للمهنيين الطبيين .">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>البحرين العالمية</title>
+    <meta name="description" content="توفر البحرين العالمية معدات طبية متطورة وحلول رعاية صحية للمهنيين الطبيين في .">
+    <link rel="shortcut icon" href="./images/heart-pulse-solid.png" type="image/x-icon">
+    <!-- Bootstrap 5 RTL CSS - Optimized for mobile -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-text">البحرين العالمية</div>
-                <div class="logo-icon">
-                    <i class="fas fa-heartbeat"></i>
+<body class="overflow-x-hidden">
+    <!-- Header - Fixed container width -->
+    <header class="bg-dark py-2 py-md-3 sticky-top shadow-sm">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="d-flex align-items-center">
+                <!-- Mobile Menu Toggle (Left Side) -->
+                <button class="btn btn-link text-white p-0 me-2 me-md-3 d-lg-none flex-shrink-0" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"
+                    aria-label="قائمة التنقل">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+
+                <!-- Logo - Prevent overflow -->
+                <div class="logo d-flex gap-3 align-items-center flex-shrink-0">
+                    <div class="logo-icon rounded bg-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:45px;height:45px;min-width:45px;">
+                        <i class="fas fa-heartbeat text-white fs-5"></i>
+                    </div>
+                    <div class="logo-text fs-5 fs-md-4 fw-bold text-primary me-1 me-md-2">البحرين العالمية</div>
                 </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="ms-auto d-none d-lg-block bg-dark">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li class="ms-3 ms-xl-4"><a href="#about" class="nav-link text-secondary px-0 py-2 fw-medium">عن
+                                الشركة</a></li>
+                        <li class="ms-3 ms-xl-4"><a href="#home"
+                                class="nav-link text-secondary px-0 py-2 fw-medium">الرئيسية</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#about" class="animate">عن الشركة</a></li>
-                    <li><a href="#home" class="animate delay-1">الرئيسية</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero custom-section" style="background-image: url('./images/alabaren-alalmeay.jpeg');" id="home">
-        <div class="section-overlay"></div>
+    <!-- Offcanvas Mobile Menu - Fixed width -->
+    <div class="offcanvas offcanvas-start text-white w-75 bg-dark ml-4" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel" data-bs-scroll="true" data-bs-backdrop="true">
+        <div class="offcanvas-header pb-2">
+            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
+                aria-label="إغلاق"></button>
+            <h5 class="offcanvas-title fw-bold" id="offcanvasMenuLabel">القائمة</h5>
+        </div>
+        <div class="offcanvas-body pt-2">
+            <ul class="list-unstyled mt-3">
+                <li class="mb-2"><a href="#home"
+                        class="d-block text-white text-decoration-none py-2 px-3 rounded hover-bg">الرئيسية</a></li>
+                <li class="mb-2"><a href="#about"
+                        class="d-block text-white text-decoration-none py-2 px-3 rounded hover-bg">عن الشركة</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <div class="container">
-            <div class="hero-content animate">
-                <h1>حلول طبية متقدمة لعالم أكثر صحة</h1>
-                <p>نوفر معدات طبية متطورة وخدمات رعاية صحية للمهنيين الطبيين بدقة وموثوقية عالية.
-                </p>
-                <a href="#about" class="btn">تعرف أكثر</a>
+    <!-- Hero Section - Fixed mobile constraints -->
+    <section id="home"
+        class="hero position-relative overflow-hidden d-flex align-items-center justify-content-center text-center"
+        style="min-height: 100dvh; background-image: url('./images/alabaren-alalmeay.jpeg'); background-size: cover; background-position: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75"></div>
+        <div class="container position-relative z-1 text-white px-3 px-md-4">
+            <h1 class="display-3 display-md-2 display-lg-1 fw-bold mb-3 mb-md-4 animate">حلول طبية متقدمة لعالم أكثر صحة
+            </h1>
+            <p class="fs-5 fs-md-4 mb-4 mb-md-5 animate delay-1 px-2">نوفر معدات طبية متطورة وخدمات رعاية صحية للمهنيين
+                الطبيين في بدقة وموثوقية عالية.</p>
+            <a href="#about" class="btn btn-primary btn-lg px-4 py-3 fw-bold animate delay-2 rounded-pill shadow">تعرف
+                أكثر</a>
+        </div>
+    </section>
+
+    <!-- About Section - Responsive constraints -->
+    <section id="about" class="py-5 py-md-6 bg-dark text-white">
+        <div class="container px-3 px-md-4">
+            <div class="text-center mb-4 mb-md-5 animate">
+                <h2 class="display-6 display-md-5 fw-bold mb-2 mb-md-3">عن البحرين العالمية</h2>
+                <p class="text-secondary fs-6 fs-md-5">نحن ملتزمون بتقديم معدات طبية عالية الجودة وحلول رعاية صحية
+                    للمهنيين الطبيين في .</p>
+            </div>
+
+            <div class="row align-items-center g-4 g-md-5">
+                <div class="col-12 col-lg-6 animate delay-1">
+                    <h3 class="h4 fw-bold mb-3 mb-md-4 text-white">رسالتنا</h3>
+                    <p class="fs-6 fs-md-5 text-secondary mb-3">في البحرين العالمية، نحن مكرسون لتطوير الرعاية الصحية من
+                        خلال حلول طبية مبتكرة. مهمتنا هي تزويد المهنيين الصحيين بأعلى جودة من المعدات والخدمات الطبية
+                        التي تعزز رعاية المرضى وتحسن النتائج الصحية.</p>
+                    <p class="fs-6 fs-md-5 text-secondary mb-3">مع سنوات من الخبرة في الصناعة الطبية، بنينا علاقات قوية
+                        مع مقدمي الرعاية الصحية في ، مما يضمن فهمنا لاحتياجاتهم وتحدياتهم الفريدة.</p>
+                    <p class="fs-6 fs-md-5 text-secondary mb-4">يلزم التزامنا بالتميز والابتكار والرعاية المتمحورة حول
+                        المريض كل ما نقوم به. نستثمر باستمرار في البحث والتطوير لإدخال أحدث التقنيات الطبية إلى السوق،
+                        مما يضمن حصول عملائنا على أفضل الأدوات لتقديم رعاية صحية استثنائية.</p>
+
+                    <div
+                        class="email-highlight bg-primary bg-opacity-10 border-end border-3 border-primary p-3 p-md-4 rounded-start mt-3 mt-md-4 w-100">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <i class="fas fa-envelope text-primary fs-5 me-2 me-md-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="d-block fs-6 fs-md-5 mb-1">البريد الإلكتروني:</strong>
+                                <span class="fs-6 fs-md-5">albaharenalalmeay@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 animate delay-2">
+                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow-lg border border-secondary">
+                        <img src="./images/equipmets.jpeg" class="w-100 h-100 object-fit-cover"
+                            alt="المعدات الطبية والمهنيون" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title animate">
-                <h2>عن البحرين العالمية</h2>
-                <p>نحن ملتزمون بتقديم معدات طبية عالية الجودة وحلول رعاية صحية للمهنيين الطبيين .
-                </p>
-            </div>
+    <!-- Footer - Mobile optimized -->
+    <footer class="bg-dark py-4 py-md-5 mt-5 mt-md-6">
+        <div class="container px-3 px-md-4">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <h3 class="h5 h4-md fw-bold mb-3 mb-md-4 text-white">البحرين العالمية</h3>
+                    <p class="text-secondary mb-3 mb-md-4 fs-6 fs-md-5">نوفر معدات طبية متطورة وحلول رعاية صحية للمهنيين
+                        الطبيين في بدقة وموثوقية عالية.</p>
 
-            <div class="about-content">
-                <div class="about-text animate delay-1">
-                    <h3>رسالتنا</h3>
-                    <p>في البحرين العالمية، نحن مكرسون لتطوير الرعاية الصحية من خلال حلول طبية مبتكرة. مهمتنا هي تزويد
-                        المهنيين الصحيين بأعلى جودة من المعدات والخدمات الطبية التي تعزز رعاية المرضى وتحسن النتائج
-                        الصحية.</p>
-                    <p>مع سنوات من الخبرة في الصناعة الطبية، بنينا علاقات قوية مع مقدمي الرعاية الصحية، مما يضمن فهمنا
-                        لاحتياجاتهم وتحدياتهم الفريدة.</p>
-                    <p>يلزم التزامنا بالتميز والابتكار والرعاية المتمحورة حول المريض كل ما نقوم به. نستثمر باستمرار في
-                        البحث والتطوير لإدخال أحدث التقنيات الطبية إلى السوق، مما يضمن حصول عملائنا على أفضل الأدوات
-                        لتقديم رعاية صحية استثنائية.</p>
-
-                    <div class="email-highlight">
-                        <i class="fas fa-envelope"></i>
-                        <strong>البريد الإلكتروني:</strong> info@bahrain-global.com
+                    <div
+                        class="email-highlight bg-primary bg-opacity-15 border-end border-3 border-primary p-3 rounded-start mb-3 w-100">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <i class="fas fa-envelope fs-5 me-2 me-md-3 flex-shrink-0"></i>
+                            <span class="fs-6 fs-md-5 fw-medium">albaharenalalmeay@gmail.com</span>
+                        </div>
+                    </div>
+                    <div
+                        class="email-highlight bg-primary bg-opacity-15 border-end border-3 border-primary p-3 rounded-start mb-3 w-100">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <i class="fa-solid fa-phone fs-5 me-2 me-md-3 flex-shrink-0"></i>
+                            <span class="fs-6 fs-md-5 fw-medium">091-2104332</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="about-image animate delay-2">
-                    <img src="./images/equipmets.jpeg" alt="المعدات الطبية والمهنيون">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>البحرين العالمية</h3>
-                    <p>نوفر معدات طبية متطورة وحلول رعاية صحية للمهنيين الطبيين بدقة وموثوقية
-                        عالية.</p>
-
-                    <div class="email-highlight"
-                        style="background: rgba(0, 123, 255, 0.15); margin-top: 1rem; padding: 1.2rem;">
-                        <i class="fas fa-envelope"></i>
-                        <strong>albaharenalalmeay@gmail.com</strong>
-                    </div>
-                    <div class="phone-highlight"
-                        style="background: rgba(0, 123, 255, 0.15); margin-top: 1rem; padding: 1.2rem;">
-                        <i class="fa-solid fa-phone"></i>
-                        <strong>091-2104332</strong>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>روابط سريعة</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about"><i class="fas fa-chevron-left"></i> عن الشركة</a></li>
-                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                <div class="col-12 col-lg-3 offset-lg-3">
+                    <h3 class="h6 h5-md fw-bold mb-3 mb-md-4 text-white">روابط سريعة</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about"
+                                class="text-secondary text-decoration-none d-flex align-items-center justify-content-end hover-opacity"><i
+                                    class="fas fa-chevron-left ms-2"></i> عن الشركة</a></li>
+                        <li class="mb-2"><a href="#home"
+                                class="text-secondary text-decoration-none d-flex align-items-center justify-content-end hover-opacity"><i
+                                    class="fas fa-chevron-left ms-2"></i> الرئيسية</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="copyright">
-                <p>&copy; 2026 البحرين العالمية الطبية. جميع الحقوق محفوظة.</p>
+            <hr class="my-4 bg-secondary opacity-50">
+
+            <div class="text-center text-secondary pt-3">
+                <p class="mb-0 fs-7">&copy; 2026 البحرين العالمية. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
